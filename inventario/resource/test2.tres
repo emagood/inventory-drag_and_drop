@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b1im27n0h535o"]
+
+[ext_resource type="Texture2D" uid="uid://bc467rkn4g4he" path="res://Sprites/Arrows/BattleBow.png" id="1_2tfp2"]
+[ext_resource type="Script" uid="uid://c8hkodicbef3r" path="res://inventario/resource/item_data.gd" id="1_c5j8c"]
+
+[resource]
+script = ExtResource("1_c5j8c")
+item_name = "arrow"
+icon = ExtResource("1_2tfp2")
+metadata/_custom_type_script = "uid://c8hkodicbef3r"

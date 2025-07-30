@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://k2v5eyib3f0l"]
+
+[ext_resource type="Texture2D" uid="uid://det55rswc7o8f" path="res://Sprites/Armors/ArielDress.png" id="1_bvuwo"]
+[ext_resource type="Script" uid="uid://c8hkodicbef3r" path="res://inventario/resource/item_data.gd" id="1_xpuge"]
+
+[resource]
+script = ExtResource("1_xpuge")
+item_name = "armor"
+icon = ExtResource("1_bvuwo")
+metadata/_custom_type_script = "uid://c8hkodicbef3r"
