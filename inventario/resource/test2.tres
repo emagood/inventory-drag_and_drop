@@ -7,4 +7,5 @@
 script = ExtResource("1_c5j8c")
 item_name = "arrow"
 icon = ExtResource("1_2tfp2")
+type = "test"
 metadata/_custom_type_script = "uid://c8hkodicbef3r"

@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgsesgi8sscak"]
+[gd_scene load_steps=10 format=3 uid="uid://cgsesgi8sscak"]
 
 [ext_resource type="Script" uid="uid://cdv75jc4ahta0" path="res://inventario/inventory.gd" id="1_i3soo"]
+[ext_resource type="Script" uid="uid://bolinq3qptydr" path="res://inventario/item_type_slot.gd" id="1_vjtfw"]
 [ext_resource type="Script" uid="uid://bit1k7u7gf60y" path="res://inventario/item_slot.gd" id="2_1w03c"]
+[ext_resource type="Resource" uid="uid://bbukoo1d4ey01" path="res://inventario/resource/test3.tres" id="2_67bt3"]
 [ext_resource type="Resource" uid="uid://b1im27n0h535o" path="res://inventario/resource/test2.tres" id="3_67bt3"]
 [ext_resource type="Texture2D" uid="uid://dpr8th4ckj1d7" path="res://Sprites/Boots/ArielDress.png" id="3_dy8m3"]
 [ext_resource type="Texture2D" uid="uid://pmk0uy7i1jqs" path="res://Sprites/Boots/Cleric.png" id="4_67bt3"]
@@ -9,6 +11,33 @@
 [ext_resource type="Script" uid="uid://vi285avcxpg0" path="res://inventario/test_drag_item.gd" id="5_vjtfw"]
 
 [node name="gui" type="CanvasLayer"]
+
+[node name="aceptSlot" type="Panel" parent="."]
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = -1
+anchor_left = 0.069000006
+anchor_top = 0.5
+anchor_right = 0.11400001
+anchor_bottom = 0.57600003
+offset_left = 0.5119934
+offset_top = -1.0
+offset_right = -0.17601013
+offset_bottom = -0.24801636
+grow_vertical = 2
+script = ExtResource("1_vjtfw")
+acept_type = "test"
+metadata/_edit_use_anchors_ = true
+
+[node name="Icon" type="TextureRect" parent="aceptSlot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dy8m3")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Inventory" type="Panel" parent="."]
 anchors_preset = 8
@@ -79,10 +108,29 @@ texture = ExtResource("4_67bt3")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="ItemSlot4" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("2_1w03c")
+
+[node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_67bt3")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="ItemSlot3" type="Panel" parent="Inventory/MarginContainer/GridContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 script = ExtResource("2_1w03c")
+item = ExtResource("2_67bt3")
 
 [node name="Icon" type="TextureRect" parent="Inventory/MarginContainer/GridContainer/ItemSlot3"]
 layout_mode = 1
