@@ -67,9 +67,9 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	else:
 		if data.item.type  == "" :
 			prints(" drop data es de tipo " + acept_type +"  "+ data.item.item_name)
-	if data.acept_type != acept_type and item != null:
+	if data.acept_type != acept_type and item != null and data.item.type != item.type:#
 		prints("no es de tipo name nada " + data.acept_type)
-		prints("no es de tipo name nada " + data.acept_type)
+	
 		icon.show()
 		data.icon.show()
 		return

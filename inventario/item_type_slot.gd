@@ -40,13 +40,10 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	if _data.item.type != acept_type:
 		#prints("",_data.item.item_name)
-		Dragitem.typeitem = _data.item.type
+		#Dragitem.typeitem = _data.item.type
 		prints("haceptamos tododdd",_data.item.type + "  " ,acept_type )
 		return false
-	##else:
-		##prints("el elemento es falso",_data)
-		###return false
-	##return true
+
 	if acept_type  == "":#
 		return true
 	if _data.item.type == acept_type :#Dragitem.typeitem
@@ -65,14 +62,11 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	var temp = item
 	prints(data.item.type)
 	if acept_type == data.item.type:
-		#
 		prints("haceptamos todo",data.item.type + "  " ,acept_type )
-	#else:
 
 	else:
 		if data.acept_type != acept_type and item == null:
 			prints("no es de tipo name nada  ac" + data.acept_type)
-		
 			icon.show()
 			data.icon.show()
 			return
@@ -81,11 +75,21 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 	prints("tipo name  ac " + data.acept_type)
 	item = data.item
 	data.item = temp
-	#data.texture = temp
 	icon.show()
 	data.icon.show()
 	update_ui()
 	data.update_ui()
-
-
 	prints("fin drop ac ")
+
+
+func _on_icon_mouse_entered() -> void:
+	if item == null:
+		return
+	$title.text = item.item_name
+	$title.visible = true
+	pass # Replace with function body.
+
+
+func _on_icon_mouse_exited() -> void:
+	$title.visible = false
+	pass # Replace with function body.
