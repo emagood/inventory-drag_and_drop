@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_c5j8c")
+power = 8
 item_name = "arrow"
 icon = ExtResource("1_2tfp2")
 type = "test"

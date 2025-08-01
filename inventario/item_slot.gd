@@ -38,16 +38,10 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 
 
 func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
-	#if _data.item:
-		#prints("",_data.item.item_name)
-		##Dragitem.typeitem = item.type
-	##else:
-		##prints("el elemento es falso",_data)
-		###return false
-	##return true
+
 	if acept_type  == "":#
 		return true
-	if _data.item.type == acept_type :#Dragitem.typeitem
+	if _data.item.type == acept_type :
 		prints("es de tipo ok " + acept_type)
 		return true
 	elif acept_type == _data.acept_type :
@@ -74,16 +68,9 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		data.icon.show()
 		return
 		prints("ok")
-	#else:
-		#if data.acept_type != acept_type:
-			#prints("no es de tipo name nada item2" + data.acept_type)
-			#icon.show()
-			#data.icon.show()
-			#return
-	
+
 	item = data.item
 	data.item = temp
-	#data.texture = temp
 	icon.show()
 	data.icon.show()
 	update_ui()

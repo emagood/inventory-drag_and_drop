@@ -17,9 +17,15 @@ func _ready() -> void:
 func update_ui() -> void:
 	if not item:
 		icon.texture = null
+		$count.text = str(0)
+		$title.text = ""
+		tooltip_text =""
 		return
 	icon.texture = item.icon
 	tooltip_text = item.item_name +" "+ item.type
+	$count.text = str(item.power)
+	$title.text = item.item_name
+
 
 func _get_drag_data(at_position: Vector2) -> Variant:
 	if not item:
@@ -39,8 +45,7 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 
 func _can_drop_data(_at_position: Vector2, _data: Variant) -> bool:
 	if _data.item.type != acept_type:
-		#prints("",_data.item.item_name)
-		#Dragitem.typeitem = _data.item.type
+
 		prints("haceptamos tododdd",_data.item.type + "  " ,acept_type )
 		return false
 
@@ -85,7 +90,7 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 func _on_icon_mouse_entered() -> void:
 	if item == null:
 		return
-	$title.text = item.item_name
+	
 	$title.visible = true
 	pass # Replace with function body.
 

@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("1_xpuge")
+power = 21
 item_name = "armor"
 icon = ExtResource("1_bvuwo")
 type = "off"
