@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=3 uid="uid://cgsesgi8sscak"]
 
 [ext_resource type="Script" uid="uid://bolinq3qptydr" path="res://inventario/item_type_slot.gd" id="1_3jk42"]
-[ext_resource type="StyleBox" uid="uid://dvnlhjjj2cloc" path="res://inventario/gui_inventory.tres" id="1_veyt5"]
+[ext_resource type="StyleBox" uid="uid://dvnlhjjj2cloc" path="res://inventario/resource/style/gui_inventory.tres" id="1_veyt5"]
 [ext_resource type="Script" uid="uid://cdv75jc4ahta0" path="res://inventario/inventory.gd" id="2_veyt5"]
 [ext_resource type="Script" uid="uid://bit1k7u7gf60y" path="res://inventario/item_slot.gd" id="3_r41te"]
 [ext_resource type="Resource" uid="uid://b1im27n0h535o" path="res://inventario/resource/test2.tres" id="4_i38i7"]
 [ext_resource type="Resource" uid="uid://k2v5eyib3f0l" path="res://inventario/resource/tes_res.tres" id="5_us4rj"]
 [ext_resource type="Resource" uid="uid://bbukoo1d4ey01" path="res://inventario/resource/test3.tres" id="6_nj6i7"]
 [ext_resource type="Script" uid="uid://vi285avcxpg0" path="res://inventario/test_drag_item.gd" id="7_6sxv1"]
-[ext_resource type="StyleBox" uid="uid://4fu7yqvuxatw" path="res://inventario/gui_test.tres" id="8_r41te"]
+[ext_resource type="StyleBox" uid="uid://4fu7yqvuxatw" path="res://inventario/resource/style/gui_test.tres" id="8_r41te"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_rpqhu"]
 font_size = 14
@@ -208,11 +208,341 @@ theme_override_styles/panel = ExtResource("8_r41te")
 script = ExtResource("7_6sxv1")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 525.0
-offset_top = 117.0
-offset_right = 788.0
-offset_bottom = 183.0
+offset_left = 673.0
+offset_top = 74.0
+offset_right = 798.0
+offset_bottom = 249.0
 theme_override_styles/panel = ExtResource("8_r41te")
+script = ExtResource("2_veyt5")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_right = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+draw_focus_border = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer/ScrollContainer"]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+columns = 2
+
+[node name="ItemSlot4" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot4"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot6" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot6"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot7" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot7"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot8" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot9" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot9"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot10" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot10"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot11" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot11"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot12" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot12"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot13" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot13"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot14" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot14"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot15" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot15"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot16" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot16"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot17" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot17"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemSlot5" type="Panel" parent="Panel/MarginContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_veyt5")
+script = ExtResource("3_r41te")
+
+[node name="Icon" type="TextureRect" parent="Panel/MarginContainer/ScrollContainer/GridContainer/ItemSlot5"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
 
 [connection signal="mouse_entered" from="aceptSlot/Icon" to="aceptSlot" method="_on_icon_mouse_entered"]
 [connection signal="mouse_exited" from="aceptSlot/Icon" to="aceptSlot" method="_on_icon_mouse_exited"]
